@@ -68,7 +68,7 @@ UIMap を使用して作成した「コード化されたUIテスト」のサン
  - アプリを起動する機能がないため、SampleWpfApp を先に起動してからテストします。 
  - UIMap を使用し、高機能で小規模な変更に強いです。UIが完成してからテストを実装します。 
  
-#### C\#
+#### C&#35;
 ```cs
 [TestMethod] 
 public void CodedUITestMethod1() { 
@@ -88,7 +88,7 @@ UIMap を使用して作成し、カスタマイズした「コード化され�
  - SampleWpfApp アプリが自動的に起動されます。 
  - UIMap を使用し、高機能で小規模な変更に強いです。UIが完成してからテストを実装します。 
  
-#### C\#
+#### C&#35;
 ```cs
 [TestMethod] 
 public void CodedUITestMethod1() { 
@@ -111,7 +111,7 @@ UIMap を使用しないで作成した「コード化されたUIテスト」の
  - SampleWpfApp アプリが自動的に起動されます。 
  - UIMap を使用しないため、大規模な変更に強く、テスト駆動開発が可能です。UIMap や UITestControl にしかない強力な機能は使えないため注意が必要です。 
 
-#### C\#
+#### C&#35;
 ```cs
 [TestMethod()] 
 public void SampleApp_正常系_連続して3アイテム追加出来ること() { 
@@ -179,7 +179,7 @@ SampleWpfApp の XAML を変更した場合、UIMap によるテストは動作�
 
 CodedUITestPlus を使用したテストは、x:Name を変更するだけで対応出来ます。
  
-#### C\#
+#### C&#35;
 ```cs
 OperationAssert.TextIs( "Description にテキストを入力", "Test Item", app.Element.Find( "(DescriptionBox)" ).MoveMouseTo().SetText( "" ).InputText( "Test Item" ) ); 
 ```
@@ -197,7 +197,7 @@ UIMap の UI Actions で操作を右クリックして表示される「Move cod
 
 ![UIMap ](description/13.png)
 
-検証（Assersion）は UIMap.cs に移動できません。UI Control Map も変更出来ません。C# コードに変換してエディタと切り離せるのは UI Actions に表示されている「操作」だけです。
+検証（Assersion）は UIMap.cs に移動できません。UI Control Map も変更出来ません。C&#35; コードに変換してエディタと切り離せるのは UI Actions に表示されている「操作」だけです。
 
 一度移動すると UIMap には戻せません。サンプルでは一度移動してカスタマイズしたものと、移動する前のものを両方含めています。
 
